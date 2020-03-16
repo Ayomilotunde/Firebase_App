@@ -95,6 +95,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/btnback"
             android:text="Submit"
+            android:onClick="btnSubmit"
             android:textColor="@android:color/black" />
 
         <Button

@@ -43,9 +43,11 @@ public class MainActivity extends AppCompatActivity {
         btnsubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if(!(name.getText().toString().equals("") || number.getText().toString().equals("")
                     || occupation.getText().toString().equals("") || address.getText().toString().equals(""))){
                         getValues();
+                    setContentView(R.layout.activity_main2);
                 } else{
                     Toast.makeText(MainActivity.this, "All field required", Toast.LENGTH_SHORT).show();
                 }
@@ -78,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnView(View view) {
         Intent intent = new Intent(this, ViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void btnSubmit(View view) {
+        Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
     }
 }
